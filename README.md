@@ -25,3 +25,8 @@ Those activities can be WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, 
 1. Unzip the data in the directory with the R Script (the data should be in UCI HAR Dataset).
 2. Execute the R script.
 3. It will output the analysis to "tidy-data.txt"
+
+### Attribution
+
+I had some inspiration for the final step of the project -- outputting the means -- from [this project](https://github.com/skahali/run_analysis.R/blob/master/run_analysis.R).
+
