@@ -1,5 +1,5 @@
+# Performs an analysis on the data and saves the results to `tiny-data.txt`
 runAnalysis <- function() {
-
 	merged <- getMergedDataSet()
 
 	# Filter it for only subject, activity, mean or std
@@ -20,13 +20,15 @@ runAnalysis <- function() {
 	data
 }
 
-# 1. Merge the training and the test sets to create one data set
+# Merge the training and the test sets to create one data set
 getMergedDataSet <- function() {
 	testSet <- getDataSet("test")
 	trainingSet <- getDataSet("train")
 	rbind(testSet, trainingSet)
 }
 
+# Get the data for a specific data set
+# The `type` argument should be `test` or `train`
 getDataSet <- function(type) {
 	root <- "UCI HAR Dataset/"
 	dataDirectory <- paste(root, type, "/", sep="")
@@ -51,6 +53,7 @@ getDataSet <- function(type) {
 	data
 }
 
+# Returns a vector of all of the features in the dataset
 getFeatureColumnNames <- function() {
 	as.vector(read.table("UCI HAR Dataset/features.txt")$V2)
 }
